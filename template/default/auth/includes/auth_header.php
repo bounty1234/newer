@@ -35,10 +35,10 @@
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
     <section id="wrapper">
-        <div class="login-register" style="background-image:url(<?=asset;?>/images/background/coins.jpg);
-        background-repeat: repeat; position: static;  background-size: 360px 360px; overflow-y: scroll;">    
+        <div class="login-register" style="background-image:url(<?=$this_folder;?>/../guest/images/bg/yatch.jpg);
+         position: static;  background-size: 100% 100%; overflow-y: scroll;">    
         <div style="
-                background: #df2c2c5c;
+                background: #ed1c24c4;
                 position: absolute;
                 top: 0px;
                 width: 100%;
