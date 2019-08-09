@@ -116,11 +116,14 @@ class AutoMatchingController extends controller
 
 		$expired_matches = Match::expired_matches()->get();
 
+			echo "<prE>";
+
+			print_r($expired_matches->toArray());
 		foreach ($expired_matches as $match) {
 
 			if ( ($match->payment_proof == '')) {
-				$match->delete_match();
-				 $match->ph->user->block_user();
+				// $match->delete_match();
+				 // $match->ph->user->block_user();
 			}
 		}
 	}
