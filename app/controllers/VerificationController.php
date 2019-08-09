@@ -67,8 +67,11 @@ class VerificationController extends controller
 	public function email()
 	{
 
-		$this->view('auth/verify_email');
+		if (strlen($this->auth()->email_verification) <= 1) {
+			Redirect::to("user/dashboard");
+		}
 
+		$this->view('auth/verify_email');
 	}
 
 
