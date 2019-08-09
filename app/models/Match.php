@@ -22,7 +22,7 @@ class Match extends Eloquent
 
 
 
-	public function expired_matches()
+	public static function expired_matches()
 	{	
 		$today = date("Y-m-d H:i:s");
 		return Match::where('status', null)->whereDate('expires', '<', $today);

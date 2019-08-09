@@ -40,7 +40,7 @@ class current_user extends controller
 	public function must_have_complete_profile()
 	{
 	
-
+		$unfilled_fields = [];
 
 		if ((@$this->setting['must_have_complete_profile'] == 1)  || true) {
 
