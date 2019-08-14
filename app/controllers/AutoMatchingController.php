@@ -19,7 +19,7 @@ class AutoMatchingController extends controller
 
 		if ($this->settings['put_on_automatic_matching'] == 1) {
 
-			// $this->match_ghs_and_phs();
+			$this->match_ghs_and_phs();
 		}
 
 
@@ -116,14 +116,11 @@ class AutoMatchingController extends controller
 
 		$expired_matches = Match::expired_matches()->get();
 
-			echo "<prE>";
-
-			print_r($expired_matches->toArray());
 		foreach ($expired_matches as $match) {
 
 			if ( ($match->payment_proof == '')) {
-				// $match->delete_match();
-				 // $match->ph->user->block_user();
+				$match->delete_match();
+				 $match->ph->user->block_user();
 			}
 		}
 	}
