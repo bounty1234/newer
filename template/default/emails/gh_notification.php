@@ -6,7 +6,7 @@
 
     <div style="font-family: Arial, sans-serif; line-height: 20px; color: #444444; font-size: 13px;">
       <b style="color: #777777;">Your GH #<?=$match->gh->id;?> has been match to receive 
-        <?=$currency;?><?=$this->money_format($match->gh_amount);?> from 
+        <?=$match->gh->currency->html_code;?><?=$this->money_format($match->gh_amount);?> to 
       <?=$match->ph->user->fullname;?>. </b>
       <br>
       Please see dashboard for more details. 

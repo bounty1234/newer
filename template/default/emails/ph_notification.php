@@ -6,7 +6,7 @@
 
     <div style="font-family: Arial, sans-serif; line-height: 20px; color: #444444; font-size: 13px;">
       <b style="color: #777777;">Your PH #<?=$match->ph->id;?> has been match to pay 
-        <?=$currency;?><?=$this->money_format($match->ph_amount);?> to 
+        <?=$match->ph->currency->html_code;?><?=$this->money_format($match->ph_amount);?> to 
       <?=$match->gh->user->fullname;?>. </b>
       <br>
       Please see dashboard for more details. 
