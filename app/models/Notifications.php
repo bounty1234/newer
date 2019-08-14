@@ -67,7 +67,7 @@ class Notifications extends Eloquent
 
 
 
-	public function send_email_notifications()
+	public static function send_email_notifications()
 	{
 
 		$pending_email_notification = self::where('email_status', null)->get()->take(25);
@@ -92,7 +92,7 @@ class Notifications extends Eloquent
 
 
 
-	public function send_sms_notifications()
+	public static function send_sms_notifications()
 	{
 
 		$pending_sms_notification = self::where('phone_status', null)->get()->take(25);
