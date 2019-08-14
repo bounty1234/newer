@@ -24,15 +24,15 @@ class Match extends Eloquent
 
 	public static function expired_matches()
 	{	
-		$today = date("Y-m-d H:i:s");
-		return Match::where('status', null)->whereDate('expires', '<', $today);
+		$today = time();
+		return Match::where('status', null)->where('expires', '<', $today);
 
 	}
 
 	public function next_x_hours($currency_id = null)
 	{
 
-		if ($currency_id == null) {
+		if ($currency_id == null) { 
 				$currency_id = $_POST['currency_id'];
 		}
 
@@ -165,7 +165,7 @@ class Match extends Eloquent
 			 			return false;
 			 		}
 
-					$expiry_hour = self::next_x_hours($attached_ph->currency_id);
+					$expiry_hour = strtotime(self::next_x_hours($attached_ph->currency_id));
 
 			 DB::beginTransaction();
 
