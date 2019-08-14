@@ -195,9 +195,9 @@ class Match extends Eloquent
 							'phone'  => $attached_gh->user->phone,
 							'email'  => $attached_gh->user->email,
 							'email_message' => $email_message,
-							'message'=>$email_message,
+							'message'=> "Your GH #{$attached_gh->id} has been matched ",
 							'heading'=> "GH Matched",
-							'url'=> "user/notifications",
+							'url'=> "user/gh_matches/$attached_gh->id",
 							'short_message'=> "Your GH #{$attached_gh->id} has been matched --$project_name"
 				 	]);
 
@@ -211,9 +211,9 @@ class Match extends Eloquent
 							'phone'  => $attached_ph->user->phone,
 							'email'  => $attached_ph->user->email,
 							'email_message' => $email_message,
-							'message'=>$email_message,
+							'message'=> "Your PH #{$attached_ph->id} has been matched ",
 							'heading'=> "PH Matched",
-							'url'=> "user/notifications",
+							'url'=> "user/ph_matches/$attached_ph->id",
 							'short_message'=> "Your PH #{$attached_ph->id} has been matched --$project_name",
 				 	]);
 
