@@ -323,7 +323,7 @@ class Match extends Eloquent
 	public  function secs_to_expire()
 	{
 
-		$expiry = strtotime($this->expires );
+		$expiry = ($this->expires );
 		$now = strtotime(date("Y-m-d H:i:s"));
 		$secs_to_expire = ($expiry - $now);
 		return $secs_to_expire;
@@ -335,7 +335,7 @@ class Match extends Eloquent
 	{
 
 		$today = strtotime(date("Y-m-d H:i:s"));
-		$expiry_date = strtotime($this->expires );
+		$expiry_date = ($this->expires );
 		$expired = ($today > $expiry_date);
 		if (($this->status != 'Approved') && ($expired) && ($this->proof == '')) {
 			return true;
@@ -346,37 +346,6 @@ class Match extends Eloquent
 
 
 
-
-
-
-
-
-protected function checkExpiry($hours_of_execution)
-{
-	$now = time();
-
- 	$date_created = strtotime($this->created_at);
-
-	$diff = (($now - $date_created)/3600);
-
-
-
-	 	if ($diff > $hours_of_execution) {
-	 		
-	 		return true;
-
-	 	}else{
-
-	 		return false;
-
-	 	}
-
-
-
-
-
-
-}
 
 }
 
