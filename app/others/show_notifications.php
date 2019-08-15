@@ -110,7 +110,7 @@
 
 show_notification = function ($notification, $error_type='info') {
 $('#error_note').html($notification);
-    $('#g-notification').css('display', 'block').fadeOut(5000);
+    $('#g-notification').css('display', 'block').fadeOut(9000);
 
 
     $('#g-notification').hover(

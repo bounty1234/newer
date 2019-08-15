@@ -223,13 +223,10 @@ echo "<pre>";
 					],
 
 		'bitcoin_address' =>[
-				'required'=> true,
+				// 'required'=> true,
 				'max'=> '34',
 				'min'=> '25',
-					],
-
-
-	
+					],	
 		));
 
 

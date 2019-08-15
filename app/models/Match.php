@@ -195,7 +195,7 @@ class Match extends Eloquent
 							'phone'  => $attached_gh->user->phone,
 							'email'  => $attached_gh->user->email,
 							'email_message' => $email_message,
-							'message'=> "Your GH #{$attached_gh->id} has been matched ",
+							'message'=> "Your GH #{$attached_gh->id} has been matched",
 							'heading'=> "GH Matched",
 							'url'=> "user/gh_matches/$attached_gh->id",
 							'short_message'=> "Your GH #{$attached_gh->id} has been matched --$project_name"

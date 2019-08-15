@@ -130,13 +130,13 @@ $page_title = "Profile";
 
                                             
 
-                                            
+                                        <!--     
                                               <div class="form-group">
                                                  <label for="bitcoin_address" class="pull-left">Bitcoin Wallet Address <sup>*</sup></label>
                                                   <input required="" type="bitcoin_address" name="bitcoin_address"  value="<?=$this->auth()->bitcoin_address;?>" id="bitcoin_address" class="form-control" >
                                               </div>
 
-
+ -->
                                               <div class="form-group">
 
                                                     <button type="submit" class="btn btn-secondary btn-block btn-flat">Update Profile</button>
